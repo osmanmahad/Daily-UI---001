@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Daily UI: 001</title>
+  </head>
+  <body>
+      <form action="#" class="form">
+        <div class="form-step form-step-active" >
+          <img src="/images/Logo.svg" class="logo" />
+          <h1 class="welcome">Welcome Back!</h1>
+          <div class="imput-group">
+            <label>Email</label>
+            <input type="text" name="email-signin" class="input" />
+          </div>
+          <div class="imput-group">
+            <label>Password</label>
+            <input type="text" class="input-password" />
+          </div>
+          <div class="password">
+            <div class="left">
+              <input type="checkbox" class="check" />
+              <p>Remember me</p>
+            </div>
+            <p>Forget Password</p>
+          </div>
+
+          <button class="main-button">Sign In</button>
+          <div class="divder">
+            <hr />
+            <p class="dividerP">or</p>
+            <hr />
+          </div>
+
+          <button class="google">
+            <img src="/images/g1520.svg" /> Sign in with Google
+          </button>
+          <a href="#" class="btn btn-next"
+            ><p id="signup">Don’t have an account? Sign up</p></a
+          >
+          <footer>
+            <img src="/images/wavesOpacity 2.svg" class="bottom-img" />
+          </footer>
+        </div>
+
+        <div class="form-step">
+          <div class="top-section">
+            <img src="./images/Logoonly.svg" class="logoonly" />
+            <img src="/images/Frame 8.svg" class="btn btn-prev arrow" />
+          </div>
+          <h1 class="pageHeader">Personal Information</h1>
+          <div class="imput-group">
+            <label>First name</label>
+            <input type="text" name="firstName" class="input" id="firstName" />
+          </div>
+          <div class="imput-group">
+            <label>Last Name</label>
+            <input type="text" name="lastName" class="input" id="lastName" />
+          </div>
+          <div class="imput-group">
+            <label>Date of Birth</label>
+            <input
+              type="text"
+              placeholder="Select date"
+              onfocus="(this.type='date')"
+              onblur="(this.type='text')"
+              name="dob"
+              class="input"
+              id="dob"
+            />
+          </div>
+          <div class="imput-group">
+            <label>Email Address</label>
+            <input type="text" name="email-signup" class="input" id="email" />
+          </div>
+          <a href="#" class="btn-next a-btn" onclick="summary()">Continue</a>
+          <footer>
+            <img src="/images/wavesOpacity 2.svg" class="bottom-img" />
+          </footer>
+        </div>
+
+        <div class="form-step" data-panel="3">
+          <div class="top-section">
+            <img src="./images/Logoonly.svg" class="logoonly" />
+            <img src="/images/Frame 8.svg" class="btn btn-prev arrow" />
+          </div>
+          <h1 class="pageHeader">Contact Information</h1>
+          <div class="imput-group">
+            <label>Address</label>
+            <input type="text" name="Address" class="input" id="address" />
+          </div>
+          <div class="two-input">
+            <div class="imput-group" id="apt">
+              <label>Apt, Suite, Building</label>
+              <input
+                type="text"
+                name="apt"
+                class="input"
+                id="apt-suite-build"
+              />
+            </div>
+
+            <div class="imput-group" id="postalcode">
+              <label>Postal Code</label>
+              <input type="text" name="postalCode" class="input" id="postal" />
+            </div>
+          </div>
+          <div class="imput-group">
+            <label>Country</label>
+            <input type="text" name="country" class="input" id="country" />
+          </div>
+          <div class="imput-group">
+            <label>City</label>
+            <input type="text" name="city" class="input" id="city" />
+          </div>
+          <div class="imput-group">
+            <label>Phone Number</label>
+            <input
+              type="text"
+              name="phone-number"
+              class="input"
+              id="phone-number"
+            />
+          </div>
+          <a href="#" class="btn-next a-btn" onclick="summary()">Continue</a>
+          <footer>
+            <img src="/images/wavesOpacity 2.svg" class="bottom-img" />
+          </footer>
+        </div>
+
+        <div class="form-step" data-panel="4">
+          <div class="top-section">
+            <img src="./images/Logoonly.svg" class="logoonly" />
+            <img src="/images/Frame 8.svg" class="btn btn-prev arrow" />
+          </div>
+          <h1 class="pageHeader">Summary Page</h1>
+
+          <h2 class="miniHeader">Personal Information</h2>
+          <p class="info">
+            First name: <span id="firstName2" class="result"></span>
+          </p>
+          <p class="info">
+            Last name: <span id="lastName2" class="result"></span>
+          </p>
+          <p class="info">
+            Date of Birth: <span id="dob2" class="result"></span>
+          </p>
+          <p class="info">
+            Email Address: <span id="email2" class="result"></span>
+          </p>
+
+          <h2 class="miniHeader">Contact Information</h2>
+          <p class="info">
+            Address: <span id="address2" class="result"></span>
+          </p>
+          <p class="info">
+            Apt, Suite, Building:
+            <span id="apt-suite-build2" class="result"></span>
+          </p>
+          <p class="info">Postal: <span id="postal2" class="result"></span></p>
+          <p class="info">
+            Country: <span id="country2" class="result"></span>
+          </p>
+          <p class="info">City: <span id="city2" class="result"></span></p>
+          <p class="info">
+            Phone Number: <span id="phone-number2" class="result"></span>
+          </p>
+
+          <a href="#" class="btn-next a-btn submit">Submit</a>
+          <footer>
+            <img src="/images/wavesOpacity 2.svg" class="bottom-img" />
+          </footer>
+        </div>
+
+        <div class="form-step" data-panel="4">
+          <div class="top-section">
+            <img src="./images/Logoonly.svg" class="logoonly" />
+            <img src="/images/Frame 8.svg" class="btn btn-prev arrow" />
+          </div>
+          <h1 class="pageHeader finalheader">You are all signed up!</h1>
+
+          <a href="./index.html" class="btn-next a-btn final-btn">Sign In</a>
+          <footer>
+            <img src="/images/wavesOpacity 2.svg" class="bottom-img" />
+          </footer>
+      </form>
+    </div>
+  </body>
+</html>
